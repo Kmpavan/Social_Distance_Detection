@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Social Distance Detection</title>
+<meta content="" name="description">
+<meta content="" name="keywords">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<style>
+body 
+{
+  font-family: "Open Sans", sans-serif;
+  background: #7EC8E3;
+  color: black;
+}
+
+a 
+{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover 
+{
+  color: #9ed49a;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+  font-family: "Montserrat", sans-serif;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero 
+{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-bg.png");
+  position: relative;
+}
+#hero .hero-container
+{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1px;
+}
+
+#hero .btn-get-started
+ {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 3px;
+  margin: 5px;
+  color: black;
+  background: #7cc576;
+}
+#hero .btn-get-started:hover
+{
+  transition: 0.5s;
+  background: #fff;
+  color: #7cc576;
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section 
+{
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg 
+{
+  background-color: #7EC8E3;
+}
+
+.section-title
+{
+  text-align: center;
+  padding-bottom: 0px;
+}
+.section-title h2 
+{
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+  color: black;
+}
+.section-title p
+{
+  margin-bottom: 0;
+  color: #aeaeae;
+}
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us .content
+{
+  padding: 60px 100px 0 100px;
+}
+.why-us .content p 
+{
+  font-size: 15px;
+  color: #959595;
+}
+.why-us .accordion-list
+{
+  padding: 0 100px 60px 100px;
+}
+.why-us .accordion-list ul 
+{
+  padding: 0;
+  list-style: none;
+}
+.why-us .accordion-list li + li 
+{
+  margin-top: 5px;
+}
+.why-us .accordion-list li
+{
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs
+{
+  padding: 40px 0;
+}
+.breadcrumbs ol 
+{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+.breadcrumbs ol li + li 
+{
+  padding-left: 10px;
+}
+.breadcrumbs ol li + li::before 
+{
+  display: inline-block;
+  padding-right: 10px;
+  color: black;
+  content: "/";
+}
+@media (max-width: 768px) 
+{
+  .breadcrumbs .d-flex
+{
+    display: block !important;
+}
+.breadcrumbs ol 
+{
+  display: block;
+}
+.breadcrumbs ol li 
+{
+  display: inline-block;
+}
+}
+h1 
+{
+  color:Black;
+  border-bottom: solid 3px black;
+  padding: 0 0 0.8em 0;
+  width: 50%;
+  margin-left: 25%;
+	font-size: 40px;
+  margin-bottom: 1em;
+}
+     
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap');
+.link 
+{
+  text-decoration: none;
+  color: black;
+  font-size: 2.1em;
+  position: relative;
+  padding: 0 10px;
+  transition: 0.25s ease-in-out all;
+  font-weight: 300;
+}
+      
+.link::before 
+{
+  content: '';
+  position: absolute;
+  background:white;
+  width: 2px;
+  height: 100%;
+  left: 0;
+  transition: 0.2s ease-in-out all;
+  z-index: -1;
+}
+      
+.link:hover::before
+{
+  width: 100%;
+}
+
+.link:hover
+{
+  color:black;
+  font-size: 1.6em;
+}   
+
+/*Department of CS Text Area Background image*/
+        .texts{
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Montserrat',sans-serif;
+            background:url(https://media1.giphy.com/media/oLAnVp6kysqsg/giphy.gif?cid=ecf05e4752ncwhx37xvp52o41cl97hzxgen73py0bb9ne7gs&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+            background-size: 50% ;
+            background-repeat: none;
+            -webkit-text-fill-color:transparent;
+            -webkit-background-clip:text;
+        }
+        @media screen and (min-width: 601px) {
+              .texts{
+                font-size: 30px;
+              }
+            }
+
+        @media screen and (max-width: 600px) {
+          .texts{
+            font-size: 6px;
+          }
+        }
+         
+
+
+/*Department of CS Text Area*/
+section.txt-area {
+	background:;
+	padding:170px 0 0 0;
+border-bottom: 5px solid #ccc;
+}
+
+#item {
+  background: linear-gradient(#7EC8E3,white);
+  color: black;
+  padding: 0px;
+  font-size: 20px;
+  text-align:center;
+  position\
+  cursor: pointer;
+}
+#item:hover, #item:focus {
+  background-color: #3e8e41;
+}
+
+.menu {
+  position: absolute;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+<div class="hero-container">
+  <a href="login.html" class="hero-logo" data-aos="zoom-out"><img src="../static/img/sdd.jpg" alt=""></a>
+  <br>
+  <div id="item"><a href="#home">Social Connecting is an Era of Social Distancing</a></div>
+  <br>
+  <a data-aos="fade-up" data-aos-delay="200" href="#about" class="btn-get-started scrollto">Have a look at our Project</a>
+</div>
+</section>
+<!-- End Hero -->
+
+<!-- ======= Header ======= -->
+
+
+<main id="main">
+<!-- ======= About Us Section ======= -->
+<section id="about" class="about">
+<div class="container">
+<div class="section-title" data-aos="fade-up">
+<h1 class="link"><a href ="{{url_for('index')}}" >Click here to track live information</a></h1>
+</div>
+</section>
+<!-- End About Us Section -->
+
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-7 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-stretch">
+<div class="content" data-aos="fade-up">
+ <center> <div class="aligncenter"><h6 class="texts">SOCIAL DISTANCING STOPS THE SPREAD OF DISEASE</h6></div></center>
+</div>
+
+<div class="accordion-list">
+<ul>
+<li data-aos="fade-up" data-aos-delay="100">
+<a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span>  What it means to practice <b> "Social distancing"</b> <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+<div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+<p> COVID-19 is mainly spread through person-to-person contact. This means in close quarters, a non-infected person can inhale respiratory droplets from an infected person, especially whenever they cough or sneeze.
+According to the Centers for Disease Control and Prevention (CDC), social distancing means remaining out of group settings and avoiding mass gatherings. When near other people, maintaining a distance of at least six feet from them when possible is critical as well
+</p>
+</div>
+</li>
+
+<li data-aos="fade-up" data-aos-delay="200">
+<a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span>  The <b> "importance" </b> of social distancing<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+<div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+<p>The goal of social distancing is to keep healthy people and those who are sick from coming into close contact with one another. This slows the person-to-person transmission of the virus, as well as the spread of COVID-19 in general. When everyone is not sick all at once, hospitals aren’t overwhelmed and can better manage the resources needed to care for infected individuals</p>
+</div>
+</li>
+
+<li data-aos="fade-up" data-aos-delay="300">
+<a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03  </span><b>"Social distancing "</b> tips<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+<div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+<p>
+Practicing social distancing means you’re doing your part to prevent the spread of COVID-19. However, staying at home can start to get lonely after a while<br><br>
+Check out these tips to keep busy and stay connected with others.<br><br>
+1.Check things off your to-do list: -This could include cleaning around the house, writing thank-you cards, organizing personal paperwork or getting to those around-the-house projects.<br>
+2.Stay active while at home: -There are so many ways to work out at home thanks to the internet. <br>
+3.Keep a routine: - Keep a routine at home that is similar to your normal schedule.<br>
+4.Make time for self-improvement and care: - Read up on something you’re interested in and Learn something new, like a language or a skill.  <br>                                        
+5.Keep in touch with other people who may be feeling disconnected too: -Call a grandparent or relative you haven’t talked to in a while. Use video calls to feel more present when reaching out to friends or your family.<br>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>    
+</body>
+</html>

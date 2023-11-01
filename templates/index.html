@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SDDRL</title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      ::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        width: calc(2px * 2);
+        border: 2px solid rgba(26, 26, 26, 0);
+      }
+
+      ::-webkit-scrollbar-track-piece {
+        background: transparent;
+        width: calc(2px / 2);
+        border: 2px solid rgba(26, 26, 26, 0);
+      }
+
+      body {
+        scrollbar-face-color: rgba(255, 255, 255, 0.15);
+        scrollbar-track-color: transparent;
+      }
+
+      div {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        font-size: 5vmin;
+      }
+
+      body {
+        display: grid;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: black;
+        background: #7EC8E3;
+       
+      }
+      body .message {
+        position: absolute;
+        right: 0.5vw;
+        top: 1vw;
+        max-width: 60vw;
+        font-size: 12px;
+        font-family: "Open Sans", sans-serif;
+      }
+      body .message a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+      }
+      body .message a:hover {
+        border-width: 3px;
+      }
+      body .card {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 2em;
+        align-items: center;
+        border-radius: 1em;
+        width: 40%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+        background: rgba(255, 255, 255, 0.2);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        transform: perspective(500px);
+        transform-style: preserve-3d;
+      }
+      body .card .title {
+        transform: translateZ(20px);
+      }
+      body .card .text {
+        padding-top: 20px;
+        font-size: 0.4em;
+        justify-content: center;
+      }
+      body .card .text span {
+        display: block;
+        transform: translateZ(40px);
+        text-align: center;
+      }
+      body .card .text span:nth-child(2) {
+        padding-left: 1em;
+        transform: translateZ(60px);
+      }
+      body .card .text span:nth-child(3) {
+        padding-left: 2em;
+        transform: translateZ(80px);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Social Distancing Detection in Real Time</h2>
+
+    <form
+      name="live"
+      action="/live"
+      method="POST"
+      onclick="document.live.submit();">
+      <div
+        class="card"
+        data-tilt
+        data-tilt-scale="0.95"
+        data-tilt-startY="40"
+        onclick="location.href='#';"
+        style="cursor: pointer">
+        <div class="title">Live Camera</div>
+        <div class="text">
+          <span>(video input : system camera)</span>
+        </div>
+      </div>
+    </form>
+
+    <form
+      name="video"
+      action="/video"
+      method="POST"
+      onclick="document.video.submit();" >
+      <div
+        class="card"
+        data-tilt
+        data-tilt-scale="0.95"
+        data-tilt-startY="40"
+        onclick="location.href='#';"
+        style="cursor: pointer">
+        <div class="title">Video File</div>
+        <div class="text">
+          <span>(video input : clipboard copied url/path)</span>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
